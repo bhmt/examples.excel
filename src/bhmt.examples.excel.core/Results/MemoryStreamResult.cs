@@ -1,4 +1,4 @@
-﻿namespace bhmt.examples.excel.api.Results
+﻿namespace bhmt.examples.excel.core.Results
 {
     public class MemoryStreamResult
     {

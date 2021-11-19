@@ -1,7 +1,8 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using bhmt.examples.excel.api.Writer;
+using bhmt.examples.excel.infrastructure.Writer;
+using bhmt.examples.excel.infrastructure.Settings;
 
 
 namespace bhmt.examples.excel.api

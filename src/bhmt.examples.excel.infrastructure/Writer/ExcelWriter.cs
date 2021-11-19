@@ -1,6 +1,8 @@
-﻿using bhmt.examples.excel.api.Results;
+﻿using bhmt.examples.excel.core.Results;
+using bhmt.examples.excel.core.Utilities;
+using bhmt.examples.excel.infrastructure.Settings;
 
-namespace bhmt.examples.excel.api.Writer
+namespace bhmt.examples.excel.infrastructure.Writer
 {
     public class ExcelTemplateWriter : BaseExcelWriter, IExcelWriter
     {

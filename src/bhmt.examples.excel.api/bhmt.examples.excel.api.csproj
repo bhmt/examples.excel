@@ -5,9 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NetEscapades.Configuration.Validation" Version="2.0.0" />
-    <PackageReference Include="NPOI" Version="2.5.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\bhmt.examples.excel.infrastructure\bhmt.examples.excel.infrastructure.csproj" />
+    <ProjectReference Include="..\bhmt.examples.excel.core\bhmt.examples.excel.core.csproj" />
   </ItemGroup>
 
 </Project>

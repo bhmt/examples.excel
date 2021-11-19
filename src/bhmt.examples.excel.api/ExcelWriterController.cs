@@ -2,8 +2,8 @@
 using System.Net.Mime;
 
 using Microsoft.AspNetCore.Mvc;
-using bhmt.examples.excel.api.Results;
-using bhmt.examples.excel.api.Writer;
+using bhmt.examples.excel.core.Results;
+using bhmt.examples.excel.infrastructure.Writer;
 
 namespace bhmt.examples.excel.api.Controllers
 {

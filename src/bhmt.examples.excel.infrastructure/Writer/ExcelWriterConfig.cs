@@ -1,4 +1,4 @@
-﻿namespace bhmt.examples.excel.api.Writer
+﻿namespace bhmt.examples.excel.infrastructure.Writer
 {
     public static class ExcelWriterConfig
     {

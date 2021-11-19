@@ -438,11 +438,11 @@ $RECYCLE.BIN/
 .idea/
 *.sln.iml
 
-##
-## Visual Studio Code
-##
+# Visual studio code
 .vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+**/.env.*
+coverage.json
+
+**/appsettings.Development.json
+**/launchSettings.json
+**/global.json

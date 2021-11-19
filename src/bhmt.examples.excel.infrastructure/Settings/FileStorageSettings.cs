@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using NetEscapades.Configuration.Validation;
 
-namespace bhmt.examples.excel.api
+namespace bhmt.examples.excel.infrastructure.Settings
 {
     /// <summary>
     /// Defines validation class for file storage settings.

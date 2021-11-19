@@ -1,10 +1,10 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
-using bhmt.examples.excel.api.Results;
+using bhmt.examples.excel.core.Results;
+using bhmt.examples.excel.infrastructure.Settings;
 
-namespace bhmt.examples.excel.api.Writer
+namespace bhmt.examples.excel.infrastructure.Writer
 {
     public class BaseExcelWriter
     {

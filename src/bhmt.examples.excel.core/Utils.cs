@@ -1,9 +1,7 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
-namespace bhmt.examples.excel.api
+namespace bhmt.examples.excel.core.Utilities
 {
     public static class Utils
     {
