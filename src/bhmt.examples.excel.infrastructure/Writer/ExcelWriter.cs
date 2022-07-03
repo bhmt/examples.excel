@@ -1,5 +1,6 @@
 ﻿using bhmt.examples.excel.core.Results;
 using bhmt.examples.excel.core.Utilities;
+using bhmt.examples.excel.core.Writer;
 using bhmt.examples.excel.infrastructure.Settings;
 
 namespace bhmt.examples.excel.infrastructure.Writer

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Net.Mime;
-
-using Microsoft.AspNetCore.Mvc;
 using bhmt.examples.excel.core.Results;
-using bhmt.examples.excel.infrastructure.Writer;
+using bhmt.examples.excel.core.Writer;
+using bhmt.examples.excel.infrastructure.Settings;
+using Microsoft.AspNetCore.Mvc;
 
 namespace bhmt.examples.excel.api.Controllers
 {
@@ -15,20 +15,19 @@ namespace bhmt.examples.excel.api.Controllers
 
     public class ExcelWriterController : ControllerBase
     {
-        private readonly IExcelWriter excelTemplateWriter;
-        private readonly IExcelWriter excelCodeWriter;
+        private readonly IWriterFactory _factory;
 
-        public ExcelWriterController(IExcelWriter excelTemplateWriter, IExcelWriter excelCodeWriter)
+        public ExcelWriterController(IWriterFactory factory, FileStorageSettings settings)
         {
-            this.excelTemplateWriter = excelTemplateWriter ?? throw new ArgumentNullException(nameof(excelTemplateWriter));
-            this.excelCodeWriter = excelCodeWriter ?? throw new ArgumentNullException(nameof(excelCodeWriter));
+            _factory = factory ?? throw new ArgumentNullException(nameof(factory));
         }
 
         [HttpGet]
         [Route("template/{name}")]
         public IActionResult GetExcelFromTemplate([FromRoute] string name)
         {
-            var result = excelTemplateWriter.GetExcel(name);
+            var w = _factory.GetWriter(true);
+            var result = w.GetExcel(name);
 
             Response.Headers["Content-Disposition"] = new ContentDisposition
             {
@@ -43,7 +42,8 @@ namespace bhmt.examples.excel.api.Controllers
         [Route("code/{name}")]
         public IActionResult GetExcelFromCode([FromRoute] string name)
         {
-            var result = excelCodeWriter.GetExcel(name);
+            var w = _factory.GetWriter(false);
+            var result = w.GetExcel(name);
             return ToFile(result);
         }
 

@@ -1,6 +1,6 @@
 ﻿using bhmt.examples.excel.core.Results;
 
-namespace bhmt.examples.excel.infrastructure.Writer
+namespace bhmt.examples.excel.core.Writer
 {
     public interface IExcelWriter
     {

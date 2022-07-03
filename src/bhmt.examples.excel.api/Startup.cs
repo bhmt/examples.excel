@@ -1,8 +1,9 @@
+using bhmt.examples.excel.core.Writer;
+using bhmt.examples.excel.infrastructure.Settings;
+using bhmt.examples.excel.infrastructure.Writer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using bhmt.examples.excel.infrastructure.Writer;
-using bhmt.examples.excel.infrastructure.Settings;
 
 
 namespace bhmt.examples.excel.api
@@ -22,8 +23,7 @@ namespace bhmt.examples.excel.api
             services.AddControllers();
             services.AddSwaggerGen();
 
-            services.AddScoped<IExcelWriter, ExcelTemplateWriter>();
-            services.AddScoped<IExcelWriter, ExcelCodeWriter>();
+            services.AddScoped<IWriterFactory, WriterFactory>();
             services.ConfigureValidatableSetting<FileStorageSettings>(Configuration.GetSection("FileStorageSection"));
         }
 

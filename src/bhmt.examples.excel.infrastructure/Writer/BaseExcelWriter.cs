@@ -1,8 +1,8 @@
 ﻿using System.IO;
-using NPOI.SS.UserModel;
-using NPOI.XSSF.UserModel;
 using bhmt.examples.excel.core.Results;
 using bhmt.examples.excel.infrastructure.Settings;
+using NPOI.SS.UserModel;
+using NPOI.XSSF.UserModel;
 
 namespace bhmt.examples.excel.infrastructure.Writer
 {
